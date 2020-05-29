@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* 기본 색상 */
+:root{
+  --main-color: #5D9AB2;
+  --accent-color: #BF6A7A;
+  --dark-main-color: #2B5566;
+  --text-bright-color: #fff;
+}
+
+/* 기본설정 : 페이지 전체 */
+body {
+    margin: 0; /*현재 여백은 바디에 기본적으로 적용되는 여백이므로 수정해야함*/
+    /*선택자 역활 {body}에 적용 할 것이기 때무에 body사용*/
+    /*여러개의 폰트를 쉼표로 연결하여 지정, 앞쪽에 있는 폰트부터 우선적으로 적용*/
+    font-family: '맑은고딕'; /*윈도우에선 맑은 고딕*/
+     'Apple SD Gothic Neo' ,/*ios에서는 에플 고딕*/
+    sans-serif;/*그 밖의 환경에서는 sans-serif*/
+    }
+
+/* 콘텐츠A: 하어로 이미지*/
+.conA {
+    display: flex;
+    align-items: center; /*위 아래 방향*/
+    justify-content: center;/*좌,우 방향*/
+    height: 100vh;/*1vh는 화면 높이의 100분의 1*/
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1))/*순서대로 (붉은색,초록색,파란색,투명도(0~1))*/, url(img/fruits.jpg);/*배경이미지를 출력할 수 있도록*/
+    background-position: center;/*배경 이미지 정렬*/
+    background-size: cover;/*배경 이미지 크기*/
+    color: #fff;
+    color: var(--text-bright-color);
+    text-align: center;/*사이트 이름과 캐치프레이즈는 중앙에 정렬*/
+
+}
+
+.conA h1 {/*제목*/
+    margin-top: 0;/*위 아래 여백 크기*/
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif; /*font-family 설정을 사용하면 bebas혹은 고딕계열로 된 폰트 출력*/
+    font-size: 7vw;/*글자 크기 vw는 화면의 너비를 100vw로 한다 1vw는 화면 너비의 100분의 1*/
+    letter-spacing:  0.2em;
+    margin-left: 0.2em/*em은 폰트 크기 단의 1em은 폰트크기의 100분의 일*/;
+}
+.conA p{/*캐치프레이즈*/
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.5vw;
+}
+/* 로고 이미지*/
+.conA img{
+    width: 20%; /*이미지의 너비를 부모요소(conA)의 20%로 잡은 것*/
+}
+/*링크 버튼 디자인*/
+.conA a {
+    display: inline-block; /* <a>로 구성되는 박스를 인라인 박스라 하는데 인라인 박스는 내용 크기에 맞게 크기가 결정됩니다.*/
+    padding: 10px 30px;  /*버튼으로 만들 것 이므로 글자보다 조금 더 크게 출력 하도록 padding으로 버튼 안쪽에 위아래 여백을 주고*/
+    margin-top: 20px; /*20px의 여백을 넣어 캐차프레이즈와의 간격을 조정합니다. 하지만 <a>로 구성되는 박스가 인라인 박스라면 위아래 마진이 출력 되지 않으므로 inline-block선언*/
+    border: solid 3px currentColor;/*주변 테두리를 만듭니다. 글자와 같은 색상(CurrentColor), 실선(Solid)로 합시다.*/
+    border-radius: 6px; /*모서리 테두리를 조정합니다*/
+    background-color: #BF6A7A;/*버튼의 색을 강조 색상으로 지정합니다.*/
+    background-color: var(--accent-color);
+    color: #fff; /*글자 색을 지정합니다.*/
+    color: var(--text-bright-color);
+    font-size: 14px;/*버튼 내부 글자를 기본 출력보다 약간 크게 만듭니다.*/
+    text-decoration: none;/*기본적으로 출력돠는 링크 밑줄을 제거합니다.*/
+}
+
+.conA a:hover {
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));/*커서를 올린 상태에서 나타내는 :hover를 지정 버튼의 색상을 조금 밝게 만들 수 있게 흰색 이미지를 중첩시킴*/
+}
+
+@media (min-width: 768px) {/*768px를 넘어가는 화면에서 글자 포인트를 고정시켜주는 역할 미디어쿼리를 써야만 작동함*/
+    .conA h1{
+        font-size: 52px;
+    }
+
+    .conA p {
+        font-size: 22px;
+    }
+}

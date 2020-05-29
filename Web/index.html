@@ -1,0 +1,20 @@
+<!DOCTYPE html><!--웹페이지를 HTML로 작성하겠다는 선언, 첫 번쨰 줄에 작성-->
+<html lang="ko"><!--HTML설정 전체를 마크업 한다 루트 요소라고 부르며 lang속성으로 페이지의 콘텐츠가 어떤언어로 작성돠었는지를 명시한다 한국어로 작성할 것이니 ko사용-->
+    <head><!-- 브라우저 화면에 출력되지 않는 설정을 작성 하는 것-->
+        <meta charset="UTF-8"><!--HTML 파일의 인코딩 종류가 "UTF-8"이라는 것을 명시-->
+        <title>금요미식회</title><!--페이지의 타이틀을 설정-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--스마트폰, 테블릿 같은 모바일 장치 전용설정, 모바일 장치 화면 크기에 따라 페이지를 출력하려면 반드시 사용-->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--웹폰트 설정은 css파일로 제공되므로 link로 읽어들입니다 link rel을 통하여 가장 마지막에 읽어 들이게 구성하여 필요에 따라 웹폰트 설정을 덮어 씌울 수 있도록 합시다.-->
+        <link rel="stylesheet"  href="style.css"><!--외부css파일을 읽어들이는 설정 style.css를 불러온다-->
+     </head>
+     <body><!--브라우저 화면에 출력할 내용을 작성하는 칸-->
+        <section class="conA"><!--컨텐츠A 하로인이미지를 담을 구역을 나눈 것-->
+            <div class="container"><!--컨테이너 박스는 시각적인 디자인 조정을 목적으로 한다 따라서 section처럼 콘텐츠 내용을 명시하는 태그가 아닌 의미없이 범용으로 사용하는 div사용-->
+                <img src="img/chopstick.svg" alt="">
+                <h1>Hole in the wall</h1><!--큰 제목을 설정할 때 사용 24px-->
+                <p>맛있고 즐거운 먹방 라이프</p><!--캐치프레이즈 16px로 출력-->
+                <a href="#"> 먹은 것들 기록하기</a>
+            </div>
+            </section>
+     </body>
+</html>
